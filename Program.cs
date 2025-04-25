@@ -166,14 +166,14 @@ app.MapGet("/IniciarBatalha", (int id1, int id2) =>
         return Results.NotFound($"Jogador com ID {id2} não encontrado.");
     }
 
-    // Buscar mão do jogador 1
+    // Buscar a mão do jogador 1
     var maoJogador1 = maos.FirstOrDefault(b => b.IdJogador == jogador1.Id);
     if (maoJogador1 == null || maoJogador1.Cartas.Count == 0)
     {
         return Results.NotFound($"Baralho do jogador {jogador1.Nome} não encontrado ou está vazio.");
     }
 
-    // Buscar mão do jogador 2
+    // Buscar a mão do jogador 2
     var maoJogador2 = maos.FirstOrDefault(b => b.IdJogador == jogador2.Id);
     if (maoJogador2 == null || maoJogador2.Cartas.Count == 0)
     {
