@@ -1,0 +1,6 @@
+@guerraServer_HostAddress = http://localhost:5000
+
+GET {{guerraServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
